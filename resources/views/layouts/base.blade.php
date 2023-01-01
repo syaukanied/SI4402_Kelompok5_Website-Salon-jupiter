@@ -19,7 +19,7 @@
     <link href="{{ url('assets/css/style.css') }}" rel="stylesheet" crossorigin="anonymous">
     <link href="{{ url('assets/css/style.scss') }}" rel="stylesheet" crossorigin="anonymous">
   <link href="{{ url('assets/js/custom.js') }}" rel="stylesheet" crossorigin="anonymous">
-    <title>LUMBS CUT</title>
+    <title>Jupiter Salon</title>
 </head>
 
 <body>
