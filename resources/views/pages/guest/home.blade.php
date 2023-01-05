@@ -527,7 +527,7 @@
     <main>
         <!-- HERO-->
         <section class="hero">
-            <img class="bg" src="/assets/images/head.svg" alt="">
+            <img class="bg" src="/assets/images/lumbs.svg" alt="">
             <div class="content container">
                 <div class="logo-lumbs">
                     <img src="" alt="">

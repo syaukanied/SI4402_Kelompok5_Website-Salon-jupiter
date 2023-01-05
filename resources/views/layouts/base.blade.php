@@ -4,9 +4,7 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" sizes="194x194" href="{{ asset('lumbs-32x32.png') }}" type="image/png">
-    <link rel="icon" sizes="194x194" href="{{ asset('lumbs-32x32.png') }}" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

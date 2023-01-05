@@ -21,7 +21,7 @@
         <div class="modal-content">
             <div class="modal-body">
                 <div class="booking text-center px-4">
-                    <img src="./assets/images/LOGO LUMBS CUT.png" alt="" width="150px">
+                    <img src="./assets/images/Jupiter.png" alt="" width="150px">
                     <h3 class="fw-bold">BOOKING</h3>
                     <form class="text-start">
                         <div class="mb-3">

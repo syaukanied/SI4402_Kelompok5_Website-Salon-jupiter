@@ -25,6 +25,9 @@
     </style>
     @include('layouts.admin.navbar')
     <div class="container py-5">
+        <br>
+        <br>
+        <br>
         <div class="row">
             <div class="col-2 nav-item">
                 <div class="nav-link active">

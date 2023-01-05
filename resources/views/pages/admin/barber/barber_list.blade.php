@@ -44,7 +44,7 @@
                 <div class="manage-barber mb-3">
                     <a href="{{route('adminbarber-add')}}">
                         <button class="btn btn-outline-success">
-                            <i class="fas fa-plus"></i> Add New Barber
+                            <i class="fas fa-plus"></i> Add Stylist
                         </button>
                     </a>
                 </div>

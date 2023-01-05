@@ -96,7 +96,7 @@
 
     </div>
     <div class="logo">
-        <img src="/assets/images/LOGO LUMBS CUT.png" alt="">
+        <img src="/assets/images/Jupiter.png" alt="">
     </div>
 </section>
 

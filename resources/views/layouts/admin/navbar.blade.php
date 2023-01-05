@@ -1,4 +1,14 @@
 <style>
+    .navbar-dark.bg-dark {
+            background-color: #A29487 !important;
+            padding: 0 6%;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            /* position: fixed;
+            top: 2;
+            overflow: hidden; */
+        }
+    
     .nav-item .nav-link a {
         text-decoration: none;
         color: black;
@@ -11,9 +21,9 @@
 
 </style>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <div class="container">
-        <a class="navbar-brand fw-bold">Barberskuy</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top" style="color: #A29487">
+    <div class="container-fluid">
+    <img src="{{ asset('/assets/images/Jupiter.png') }}" alt="" width="70" height="70">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
