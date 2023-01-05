@@ -44,7 +44,7 @@
     }
 
     .our-service .services .service {
-        width: 150px;
+        width: 100px;
         height: 150px;
         background-color: white;
         text-align: center;
@@ -57,7 +57,7 @@
     }
 
     .our-service .services .service .img {
-        width: 150px;
+        width: 100px;
         height: 150px;
         object-fit: cover;
         margin-bottom: 10px;
