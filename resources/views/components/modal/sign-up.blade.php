@@ -50,7 +50,7 @@
                                 <div class="mb-3">
                                     <label for="gender" class="form-label">Gender</label>
                                     <select class="form-select" aria-label="gender" name="gender" id="gender" required>
-                                        <option selected disabled value="null">Pilih Gender</option>
+                                        <option selected disabled value="null">Gender</option>
                                         <option value="1">Male</option>
                                         <option value="2">Female</option>
                                     </select>

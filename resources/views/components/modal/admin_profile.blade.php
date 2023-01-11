@@ -96,6 +96,8 @@
                                 </div>
                             </div>
                         </div>
+                        <br>
+                        <br>
                         <div class="profile-form col-7">
                             <h1 class="text-center fw-bold">My Profile</h1>
                             <form action="{{route('adminlogic-update-profile')}}" method="POST">

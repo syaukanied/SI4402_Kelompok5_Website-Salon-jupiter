@@ -119,7 +119,7 @@
                                 <div class="mb-3">
                                     <label for="gender" class="form-label">Gender</label>
                                     <select class="form-select" name="gender" aria-label="gender" required>
-                                        <option selected disabled value="null">Pilih Gender</option>
+                                        <option selected disabled value="null">Gender</option>
                                         <option
                                             @if (Auth::guard('web')->user()->gender == 1)
                                                 {{"selected"}}

@@ -95,7 +95,7 @@
                         <input type="location" class="form-control" id="location" aria-describedby="location" value="{{$order->address}}" readonly>
                     </div>
                     <div class="mb-3">
-                        <label for="artist" class="form-label fw-bold">Artist</label>
+                        <label for="artist" class="form-label fw-bold">Beautician</label>
                         <input type="artist" class="form-control" id="artist" aria-describedby="artist" value="{{$order->barber->name}}" readonly>
                     </div>
                     <div class="mb-3">
@@ -131,7 +131,11 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                 <div class="modal-header justify-content-center">
+<<<<<<< HEAD
                     <b><h4 class="modal-title" id="exampleModalLabel">Invoice</h4></b>
+=======
+                    <b><h4 class="modal-title" id="exampleModalLabel">Detail</h4></b>
+>>>>>>> e679c113987b7f639a7addf26c3609517b39bc52
                     <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                 </div>
                 <div class="modal-body">
@@ -147,9 +151,15 @@
                         <label for="lokasi" class="form-label">Lokasi</label>
                         <input type="" class="form-control" style="cursor:default;" value="{{$order->address}}" id="lokasi" readonly>
                     </div>
+<<<<<<< HEAD
                     <div class="mb-3">
                         <h3 class="text-center">+1 Reward Point</h3>
                     </div>
+=======
+                    <!-- <div class="mb-3">
+                        <h3 class="text-center">+1 Reward Point</h3>
+                    </div> -->
+>>>>>>> e679c113987b7f639a7addf26c3609517b39bc52
                     <center>
                     <div class="mb-3 mx-auto">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

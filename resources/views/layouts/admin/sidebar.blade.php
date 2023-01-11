@@ -29,7 +29,11 @@
                     </li>
                     <li>
                         <a href="{{route('adminbarber')}}" class="nav-link px-0 align-middle">
+<<<<<<< HEAD
                             <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline" style="color:white;">Stylists</span> </a>
+=======
+                            <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline" style="color:white;">Beautician</span> </a>
+>>>>>>> e679c113987b7f639a7addf26c3609517b39bc52
                     </li><br>
                     <li>
                         <a href="{{route('logic-logout')}}" class="nav-link px-0 align-middle">

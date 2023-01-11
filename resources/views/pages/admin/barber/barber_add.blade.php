@@ -33,7 +33,7 @@
             </div>
             <div class="my-barber card col-10">
                 <article class="barber">
-                    <h1 class="fw-bold">Add Stylist</h1>
+                    <h1 class="fw-bold">Add Beautician</h1>
                     @foreach ($errors->all() as $error)
                         <div class="alert alert-danger">{{$error}}</div>
                     @endforeach
