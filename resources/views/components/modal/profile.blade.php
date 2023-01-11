@@ -64,8 +64,8 @@
         <div class="modal-content">
             <div class="modal-body position-relative">
                 <img class="bg-gray" src="./assets/images/Head.svg" alt="">
-                <div class="btn-home">
-                    <img style="cursor: pointer;" src="./assets/images/back-button.png" width="50" height="30" data-bs-dismiss="modal" aria-label="Close">
+                <div class="btn-home" data-bs-dismiss="modal" aria-label="Close">
+                    <img style="cursor: pointer;" src="./assets/images/back-button2.png" width="50" height="40">
                 </div>
                 <div class="profile">
                     <div class="content row">

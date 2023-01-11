@@ -33,7 +33,7 @@
         <div class="row">
             <div class="col-2 nav-item">
                 <div class="nav-link active">
-                    <a href="/admin/barber">Back</a>
+                    <a href="/admin/barbers">Back</a>
                 </div>
             </div>
             <div class="my-barber card col-10">

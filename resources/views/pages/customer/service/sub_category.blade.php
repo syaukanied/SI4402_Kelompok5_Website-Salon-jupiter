@@ -63,7 +63,7 @@
 
 </style>
 <div class="btn-back mt-4 ms-4">
-    <a href="{{ url()->previous() }}">
+    <a href="{{ url('service/category') }}">
         <img style="cursor: pointer;" src="{{ asset('/assets/images/back-button.png') }}">
     </a>
 </div>

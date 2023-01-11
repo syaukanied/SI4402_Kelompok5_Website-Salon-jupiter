@@ -10,8 +10,28 @@ use Illuminate\Support\Facades\Auth;
 class OrderController extends Controller
 {
     public function showBarberOrdersView(){
-        $orders = Order::where('barber_id', Auth::guard('web_barber')->user()->id)->get();
-        return view('pages.admin.order.index')->with('orders', $orders);
+        $idleOrders = Order::where('status',0)->where('barber_id', Auth::guard('web_barber')->user()->id)->get();
+        $orders = Order::where('status','<>',0)->where('barber_id', Auth::guard('web_barber')->user()->id)->get();
+        return view('pages.admin.order.index')->with('orders', $orders)->with('idleOrders', $idleOrders);
+    }
+
+    public function storeApproval(Request $request){
+        $id = $request->id;
+        $status = $request->status;
+
+        $updateStatus = Order::where('id', $id)->update(['status' => $status]);
+
+        if(Auth::guard('web_barber')->check()){
+            $idleOrders = Order::where('status',0)->where('barber_id', Auth::guard('web_barber')->user()->id)->get();
+            $orders = Order::where('status','<>',0)->where('barber_id', Auth::guard('web_barber')->user()->id)->get();
+            return view('pages.admin.order.index')->with('idleOrders', $idleOrders)->with('orders', $orders);
+        }
+        else {
+            $barbers = Barber::all();
+            $services = Service::all();
+
+            return view('pages.guest.home')->with('barbers', $barbers)->with('services', $services);
+        }
     }
 
     public function showProfileBooking(){

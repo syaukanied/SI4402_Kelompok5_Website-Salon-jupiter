@@ -28,6 +28,39 @@ class PageController extends Controller
             ->with('services', $services);
     }
 
+    public function dashboard(){
+        if(Auth::guard('web')->user()->role == 'admin'){
+            $idleOrders = Order::where('status',0)->get();
+            $orders = Order::where('status', '<>', 0)->get();
+            return view('pages.admin.dashboard')->with('idleOrders', $idleOrders)->with('orders', $orders);
+        }
+        else {
+            $barbers = Barber::all();
+            $services = Service::all();
+
+            return view('pages.guest.home')->with('barbers', $barbers)->with('services', $services);
+        }
+    }
+
+    public function storeDashboard(Request $request){
+        $id = $request->id;
+        $status = $request->status;
+
+        $updateStatus = Order::where('id', $id)->update(['status' => $status]);
+
+        if(Auth::guard('web')->user()->role == 'admin'){
+            $idleOrders = Order::where('status',0)->get();
+            $orders = Order::where('status', '<>', 0)->get();
+            return view('pages.admin.dashboard')->with('idleOrders', $idleOrders)->with('orders', $orders);
+        }
+        else {
+            $barbers = Barber::all();
+            $services = Service::all();
+
+            return view('pages.guest.home')->with('barbers', $barbers)->with('services', $services);
+        }
+    }
+
     // start booking service logic
     public function indexBookService(){
         $user = User::findOrFail(Auth::guard('web')->user()->id);

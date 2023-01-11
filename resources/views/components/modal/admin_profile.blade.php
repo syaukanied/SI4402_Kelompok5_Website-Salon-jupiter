@@ -72,7 +72,7 @@
             <img class="bg-gray" src="{{ asset('/assets/images/signup.svg') }}" alt="">
             <div class="modal-body position-relative">
                 <div class="btn-home">
-                    <img style="cursor: pointer;" src="{{ asset('/assets/images/home-button.png') }}" data-bs-dismiss="modal" aria-label="Close">
+                    <img style="cursor: pointer;" src="{{ asset('/assets/images/back-button2.png') }}" data-bs-dismiss="modal" aria-label="Close">
                 </div>
                 <div class="profile">
                     <div class="content row">

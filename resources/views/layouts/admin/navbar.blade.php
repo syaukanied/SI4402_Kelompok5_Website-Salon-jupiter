@@ -31,7 +31,7 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
             </ul>
-            <a class="navbar-brand">{{Auth::guard('web_barber')->user()->name}}</a>
+            <!-- <a class="navbar-brand">{{Auth::guard('web_barber')->user()->name}}</a> -->
             <span class="navbar-text d-flex" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#profile">
                 <img src="
                     @if (Auth::guard('web_barber')->user()->image != null)
@@ -39,7 +39,7 @@
                     @else
                         {{ asset('/assets/images/member-1.png') }}
                     @endif
-                " alt="" width="60px">
+                " alt="" width="40px" class="rounded-circle">
             </span>
         </div>
     </div>

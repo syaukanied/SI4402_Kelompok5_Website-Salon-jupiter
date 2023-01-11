@@ -23,6 +23,10 @@
             border-radius: 15px;
         }
 
+        .barber h6 {
+            text-align: center;
+        }
+
         .barber img {
             width: 100%;
             height: 200px;
@@ -37,10 +41,10 @@
 
     </style>
     @include('layouts.admin.navbar')
-    <div class="container py-5">
-        <div class="row">
+    <!-- <div class="container py-5">
+        <div class="row"> -->
             @include('layouts.admin.sidebar')
-            <div class="my-barber card col-10">
+            <!-- <div class="my-barber card col-10"> -->
                 <div class="manage-barber mb-3">
                     <a href="{{route('adminbarber-add')}}">
                         <button class="btn btn-outline-success">
@@ -70,7 +74,8 @@
                         </div>
                     @endforeach
                 </article>
-            </div>
+            <!-- </div> -->
         </div>
+    </div>
     </div>
 @endsection
