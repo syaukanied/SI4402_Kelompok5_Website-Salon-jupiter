@@ -5,24 +5,22 @@
         position: relative;
     }
 
-    .our-category .bg {
-        opacity: 0.6;
+    .bg {
+        opacity: 0.3;
         position: absolute;
         left: 0;
         top: 0;
         min-width: 100%;
         min-height: 100%;
-        object-fit: cover;
+        /* object-fit: cover; */
     }
 
     .our-category .content {
         position: relative;
-        padding-top: 150px;
-    }
-
-    .our-category .content {
-        position: relative;
-        padding-top: 150px;
+        margin-top: 110px;
+        padding-bottom: 70px;
+        /* padding-top: 150px; */
+        background-color:rgba(192, 174, 170, 0.8);
     }
 
     .our-category .categories {
@@ -82,24 +80,28 @@
     }
 
 </style>
-<div class="btn-back mt-4 ms-4">
-    <a href="{{ url()->previous() }}">
-        <img style="cursor: pointer;" src="{{ asset('/assets/images/back-button.png') }}">
+@include('templates.navbar')
+<br><br><br><br>
+<!-- <div class="btn-back mt-4 ms-4">
+<br><br><br>
+    <a href="{{ url('service') }}">
+        <img style="cursor: pointer;" src="{{ asset('/assets/images/back-button2.png') }}">
     </a>
-</div>
+</div> -->
+<img class="bg" src="/assets/images/bgtest2.jpeg" alt="">
 
 <!-- ourCategory-->
 <section id="ourCategory" class="our-category">
-    <img class="bg" src="/assets/images/signup.svg" alt="">
-    <div class="content container">
-        <h2 class="text-center">Silahkan Pilih Tipe Service Anda</h2>
+    <div class="content container rounded-3">
+        <br><br>
+        <h2 class="text-center" style="color:white;font-family: 'Trebuchet MS', sans-serif;">Choose Your Service Type</h2>
         <article class="categories">
            @foreach ($service_categories as $service_category)
                 <form action="{{route('service.category-logic')}}" method="post">
                     @csrf
                     <div class="category">
                         <input type="text" name="service_category_id" id="service_category_id" hidden readonly value="{{ $service_category->id }}" />
-                        <p>{{$service_category->name}}</p>
+                        <p style="color:white; font-family: 'Trebuchet MS', sans-serif;">{{$service_category->name}}</p>
                         <div class="bg-white position-relative">
                             <img class="img" src="
                                 @if ($service_category->image != null)

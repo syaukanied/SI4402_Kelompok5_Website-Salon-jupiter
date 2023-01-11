@@ -19,23 +19,18 @@
     }
 
     .our-artist .bg {
-        opacity: 0.6;
+        opacity: 0.3;
         position: absolute;
         left: 0;
         top: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        min-width: 100%;
+        min-height: 100%;
+        /* object-fit: cover; */
     }
 
     .our-artist .content {
         position: relative;
-        padding-top: 150px;
-    }
-
-    .our-artist .content {
-        position: relative;
-        padding-top: 150px;
+        padding-top: 50px;
     }
 
     .our-artist .artists {
@@ -92,34 +87,50 @@
         padding: 10px 50px;
     }
 
+    .pilihartis {
+        background-color:rgba(192, 174, 170, 0.8);
+        padding: 30px;
+        border-radius: 8px;
+    }
 </style>
-<div class="btn-back mt-4 ms-4">
+@include('templates.navbar')
+<br><br><br><br>
+<!-- <div class="btn-back mt-4 ms-4">
+<br><br><br>
     <a href=" {{ url()->previous() }}">
-        <img style="cursor: pointer;" src="{{ asset('/assets/images/back-button.png') }}">
+        <img style="cursor: pointer;" src="{{ asset('/assets/images/back-button2.png') }}">
     </a>
-</div>
+</div> -->
 
 <!-- ourArtist-->
 <section id="ourArtist" class="our-artist">
-    <img class="bg" src="/assets/images/signup.svg" alt="">
-    <div class="content container">
-        <h2 class="text-center">Pilih Hair Artist Anda</h2>
-        <article class="artists">
-            @foreach ($barbers as $barber)
+    <img class="bg" style="position:fixed;" src="/assets/images/bgtest2.jpeg" alt=""><br><br><br>
+    <div class="content container rounded-3">
+        <div class="pilihartis">
+        <br>
+            <b><h2 class="text-center" style="color:white; font-family: 'Trebuchet MS', sans-serif;">Pilih Hair Artist</h2></b><br>
+            <div class="row center text-center row-cols-1 row-cols-md-3 px-2 g-4" style="margin-top: 20px;">
+                @foreach ($barbers as $barber)
                 <div class="artist">
-                    <p>{{$barber->name}}</p>
-                        <div class="bg-white position-relative">
-                            <img class="img" src="
+                    <div class="position-relative">
+                        <b><p style="color:white; font-family: 'Trebuchet MS', sans-serif;">{{$barber->name}}</p></b>
+                        <img class="img" style="object-fit:cover;border-radius: 8px;width: 250px;height: 350px;" src="
                                 @if ($barber->image !== null)
                                     {{asset($barber->image)}}
                                 @else
                                     https://thumbs.dreamstime.com/b/bearded-man-male-portrait-stylish-beard-barber-scissors-straight-razor-shop-vintage-barbershop-shaving-219675564.jpg
                                 @endif
                                 ">
-                            <button class="btn" data-bs-toggle="modal" data-bs-target="#book{{$barber->id}}">Pilih</button>
-                        </div>
-                        <p class="price">Rp. {{$barber->rate}}-</p>
+                                <br><br>
+                        <button class="btn btn-warning btn-md" data-bs-toggle="modal" data-bs-target="#book{{$barber->id}}">Pilih</button>
+                    </div>
+                    <br>
+                    <p class="price" style="color:; font-family: 'Trebuchet MS', sans-serif;">Rp. {{$barber->rate}}-</p>
                 </div>
+
+
+
+
                 <div class="modal fade" id="book{{$barber->id}}" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-lg">
                         <div class="modal-content">
@@ -152,13 +163,12 @@
                         </div>
                     </div>
                 </div>
-            @endforeach
-        </article>
-    </div>
+                @endforeach
+            </div>
+        </div>
+    </div><br><br><br><br>
 </section>
 
 
 {{-- @include('components.modal.book') --}}
 @include('templates.footer')
-
-

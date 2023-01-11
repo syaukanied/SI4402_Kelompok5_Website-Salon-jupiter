@@ -26,6 +26,9 @@ use App\Models\ServiceSubCategory;
 */
 
 Route::get('/', [PageController::class, 'home'])->name('home');
+Route::get('/dashboard', [PageController::class, 'dashboard'])->name('dashboard');
+Route::post('/dashboard', [PageController::class, 'storeDashboard'])->name('storeDashboard');
+Route::post('/approval', [OrderController::class, 'storeApproval'])->name('storeApproval');
 
 Route::get('/service', [PageController::class, 'indexBookService'])->middleware('auth:web')->name('service-view');
 Route::post('/service', [PageController::class, 'storeBookService'])->middleware('auth:web')->name('service-logic');
@@ -44,6 +47,7 @@ Route::prefix('service')->middleware('auth:web')->group(function () {
         Route::post('/artist', [PageController::class, 'storeServiceOrderBarbers'])->name('artist-logic');
     });
 });
+
 Route::view('/artist', 'pages.customer.hair_artist');
 
 Route::post('/login', [AuthenticationController::class, 'login'])->name('logic-login');

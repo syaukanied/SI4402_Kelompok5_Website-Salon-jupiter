@@ -53,12 +53,15 @@
     }
 
 </style>
-<div class="btn-back mt-4 ms-4">
+<!-- <div class="btn-back mt-4 ms-4">
     <a href="{{ url()->previous() }}">
         <img style="cursor: pointer;" src="{{ asset('/assets/images/back-button.png') }}">
     </a>
-</div>
+</div> -->
+@include('templates.navbar')
+<br><br><br>
 <section class="booking">
+<br><br>
     <img class="bg" src="/assets/images/signup.svg" alt="">
     <div class="w-50 mx-auto">
         <div class="card">
@@ -108,5 +111,6 @@
 
         </div>
     </div>
+    <br><br>
 </section>
 @include('templates.footer')

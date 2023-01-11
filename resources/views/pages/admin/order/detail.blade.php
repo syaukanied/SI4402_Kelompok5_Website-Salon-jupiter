@@ -44,7 +44,7 @@
         <div class="row">
             <div class="col-2 nav-item">
                 <div class="nav-link active">
-                    <a href="/admin/order">Back</a>
+                    <a href="/admin/orders">Back</a>
                 </div>
             </div>
             <div class="my-order card col-10">

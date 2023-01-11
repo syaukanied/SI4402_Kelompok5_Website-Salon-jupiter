@@ -53,12 +53,15 @@
     }
 
 </style>
-<div class="btn-back mt-4 ms-4">
+<!-- <div class="btn-back mt-4 ms-4">
     <a href="{{ url()->previous() }}">
-        <img style="cursor: pointer;" src="{{ asset('/assets/images/back-button.png') }}">
+        <img style="cursor: pointer;" src="{{ asset('/assets/images/back-button2.png') }}">
     </a>
-</div>
+</div> -->
+@include('templates.navbar')
+<br><br><br>
 <section class="booking">
+<br><br>
     <img class="bg" src="/assets/images/signup.svg" alt="">
     <div class="w-50 mx-auto">
         <div class="card">
@@ -99,13 +102,65 @@
                         <label for="price" class="form-label fw-bold">Harga</label>
                         <input type="location" class="form-control" id="price" aria-describedby="price" value="{{$order->price}}" readonly>
                     </div>
+                    <div class="mb-3">
+                        <label for="price" class="form-label fw-bold">Status</label>
+                        <input class="form-control" id="status" aria-describedby="status" 
+                        <?php if ($order->status == 0){ ?>
+                            value="Waiting for Approval" 
+                        <?php } else if ($order->status == 1){ ?>
+                            value="Approved" 
+                        <?php } else { ?>
+                            value="Rejected" 
+                        <?php } ?>
+                        readonly>
+                    </div>
                     <div class="text-center">
-                        <input type="submit" class="btn btn-danger" id="cancel" name="cancel" value="CANCEL BOOKING">
+                        <?php if ($order->status == 0){ ?>
+                            <input type="submit" class="btn btn-danger" id="cancel" name="cancel" value="Cancel Booking">
+                        <?php } else if ($order->status == 1){ ?>
+                            <input type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#detailModal" value="View Detail">
+                            <input type="submit" class="btn btn-primary" id="cancel" name="cancel" value="Done">
+                        <?php } else { ?>
+                            <input type="submit" class="btn btn-success" id="cancel" name="cancel" value="Done">
+                        <?php }?>
                     </div>
                 </form>
             </div>
-
+            <!-- Modal -->
+            <div class="modal fade" id="detailModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header justify-content-center">
+                    <b><h4 class="modal-title" id="exampleModalLabel">Invoice</h4></b>
+                    <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nama</label>
+                        <input type="" class="form-control" style="cursor:default;" value="{{$order->name}}" id="name" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="waktu" class="form-label">Waktu</label>
+                        <input type="" class="form-control" style="cursor:default;" value="{{$order->date}}" id="waktu" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="lokasi" class="form-label">Lokasi</label>
+                        <input type="" class="form-control" style="cursor:default;" value="{{$order->address}}" id="lokasi" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <h3 class="text-center">+1 Reward Point</h3>
+                    </div>
+                    <center>
+                    <div class="mb-3 mx-auto">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                    </center>
+                </div>
+            </div>
+            </div>
+            <!-- End Modal -->
         </div>
     </div>
+    <br><br>
 </section>
 @include('templates.footer')
