@@ -48,7 +48,7 @@
                 <div class="manage-barber mb-3">
                     <a href="{{route('adminbarber-add')}}">
                         <button class="btn btn-outline-success">
-                            <i class="fas fa-plus"></i> Add Stylist
+                            <i class="fas fa-plus"></i> Add Beautician
                         </button>
                     </a>
                 </div>
@@ -63,7 +63,7 @@
                                 https://reactnativecode.com/wp-content/uploads/2018/02/Default_Image_Thumbnail.png
                             @endif
                             " alt="">
-                            <p class="my-2 text-success text-center">Rp {{$barber->rate}}</p>
+                            <p class="my-2 text-success text-center">$ {{$barber->rate}}</p>
                             <div class="mt-4">
                                 <a href="{{route('adminbarber-detail', $barber->id)}}">
                                     <button class="btn btn-outline-primary">

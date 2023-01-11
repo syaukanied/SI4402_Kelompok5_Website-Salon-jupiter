@@ -95,7 +95,7 @@
                         <input type="location" class="form-control" id="location" aria-describedby="location" value="{{$order->address}}" readonly>
                     </div>
                     <div class="mb-3">
-                        <label for="artist" class="form-label fw-bold">Artist</label>
+                        <label for="artist" class="form-label fw-bold">Beautician</label>
                         <input type="artist" class="form-control" id="artist" aria-describedby="artist" value="{{$order->barber->name}}" readonly>
                     </div>
                     <div class="mb-3">

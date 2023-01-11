@@ -25,7 +25,7 @@
                         </div>
                         <div class="d-flex justify-content-around">
                             <input type="submit" name="submit-user" id="submit-user" class="btn btn-orange" value="Sign In">
-                            <input type="submit" name="submit-barber" id="submit-barber" class="btn btn-orange" value="Login as Barber">
+                            <input type="submit" name="submit-barber" id="submit-barber" class="btn btn-orange" value="Login as Admin">
                         </div>
                     </form>
                     <div class="my-4">

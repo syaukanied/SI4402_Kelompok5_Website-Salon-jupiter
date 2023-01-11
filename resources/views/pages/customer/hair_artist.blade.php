@@ -108,7 +108,7 @@
     <div class="content container rounded-3">
         <div class="pilihartis">
         <br>
-            <b><h2 class="text-center" style="color:white; font-family: 'Trebuchet MS', sans-serif;">Pilih Hair Artist</h2></b><br>
+            <b><h2 class="text-center" style="color:white; font-family: 'Trebuchet MS', sans-serif;">Choose your Beautician</h2></b><br>
             <div class="row center text-center row-cols-1 row-cols-md-3 px-2 g-4" style="margin-top: 20px;">
                 @foreach ($barbers as $barber)
                 <div class="artist">
@@ -122,10 +122,11 @@
                                 @endif
                                 ">
                                 <br><br>
-                        <button class="btn btn-warning btn-md" data-bs-toggle="modal" data-bs-target="#book{{$barber->id}}">Pilih</button>
+                        <p class="price" style="color:; font-family: 'Trebuchet MS', sans-serif;">$ {{$barber->rate}}</p>
+                        <button class="btn btn-warning btn-md" data-bs-toggle="modal" data-bs-target="#book{{$barber->id}}">choose</button>
                     </div>
                     <br>
-                    <p class="price" style="color:; font-family: 'Trebuchet MS', sans-serif;">Rp. {{$barber->rate}}-</p>
+                    <!-- <p class="price" style="color:; font-family: 'Trebuchet MS', sans-serif;">$ {{$barber->rate}}</p> -->
                 </div>
 
 

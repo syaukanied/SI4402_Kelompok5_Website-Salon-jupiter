@@ -29,7 +29,7 @@
                     </li>
                     <li>
                         <a href="{{route('adminbarber')}}" class="nav-link px-0 align-middle">
-                            <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline" style="color:white;">Stylists</span> </a>
+                            <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline" style="color:white;">Beautician</span> </a>
                     </li><br>
                     <li>
                         <a href="{{route('logic-logout')}}" class="nav-link px-0 align-middle">

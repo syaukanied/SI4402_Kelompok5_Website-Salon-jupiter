@@ -110,7 +110,7 @@
                                     https://thumbs.dreamstime.com/b/bearded-man-male-portrait-stylish-beard-barber-scissors-straight-razor-shop-vintage-barbershop-shaving-219675564.jpg
                                 @endif
                             ">
-                            <button class="btn">Pilih</button>
+                            <button class="btn">choose</button>
                         </div>
                     </div>
                 </form>
